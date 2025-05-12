@@ -1,8 +1,24 @@
 package cbs_practice.EarlyBird.dto;
 
-public class SignupRequest {
-}
+//getter/setter 자동으로 만들어줌
+import lombok.Getter;
+import lombok.Setter;
+//생성자도 기본으로 하나 만들어둠
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
+/**
+ * 회원가입할 때 요청 데이터를 담는 DTO
+ * 클라이언트 → 서버로 전달되는 데이터 구조
+ */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class SignupRequest {
+    private String username; //username을 필수로 받을꺼
+    private String password; //password도 같이 받을 거 필수
+}
 /*
 "회원가입할 때 사용자한테 입력받을 값들을 담는 상자 하나 만들 거임.
 이 상자는 SignupRequest라는 이름으로 만들 거고,
